@@ -7,7 +7,10 @@
 </template>
 
 <script setup>
-
+//je veux appliquer un template a ce composant
+    definePageMeta({
+        layout: 'products'
+    })
 </script>
 
 <style  scoped>
