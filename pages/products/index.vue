@@ -1,17 +1,18 @@
 <template>
     <div>
-        <h2>Products</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos reprehenderit at aliquam ab facilis voluptate eius possimus iste commodi nisi?</p>
+      <div class="grid grid-cols-4 gap-5">
+        <div v-for="p in products" :key="p.id">
+          <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+        </div>
+      </div>
     </div>
-</template>
-
-<script setup>
-//je veux appliquer un template a ce composant
+  </template>
+  
+  <script setup>
+    //  fetch the products
+    const { data: products } = await useFetch('https://fakestoreapi.com/products')
+  
     definePageMeta({
-        layout: 'products'
+      layout: "products",
     })
-</script>
-
-<style  scoped>
-
-</style>
+  </script>
