@@ -7,6 +7,7 @@
                     <li><NuxtLink class="btn" to="/">Home</NuxtLink></li>
                     <li><NuxtLink to="/about">About</NuxtLink></li>
                     <li><NuxtLink to="/products">Products</NuxtLink></li>
+                    <li><NuxtLink to="products/abc">abc product</NuxtLink></li>
                 </ul>
                 
             </nav>
